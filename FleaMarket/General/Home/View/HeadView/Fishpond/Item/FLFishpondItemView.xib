@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLFishpondItemView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="YZE-3O-SbK">
+            <rect key="frame" x="0.0" y="0.0" width="251" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7H-xe-NUb">
+                    <rect key="frame" x="0.0" y="0.0" width="251" height="170"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小木头鱼塘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tX5-lh-jbF">
+                            <rect key="frame" x="8" y="14" width="235" height="21"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="pXo-l2-LyW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布数 1200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhI-9q-LTD">
+                            <rect key="frame" x="8" y="37" width="104" height="21"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="104" id="9c1-SS-Pmu"/>
+                                <constraint firstAttribute="height" constant="21" id="pvF-XN-pWB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昨日人气 4700" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUs-za-bKZ">
+                            <rect key="frame" x="125" y="37" width="126" height="21"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="sFh-ID-3u9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FxP-Br-HwP" customClass="FLPublicButton">
+                            <rect key="frame" x="8" y="64" width="46" height="23"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="3EY-gm-jwo"/>
+                                <constraint firstAttribute="height" constant="23" id="EXc-bc-SWH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="公告"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如何快速卖出这些鱼塘呢？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy8-YI-1pU">
+                            <rect key="frame" x="62" y="64" width="181" height="21"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="hFX-pF-BaA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fishpond_image" translatesAutoresizingMaskIntoConstraints="NO" id="ru4-9b-Lol">
+                            <rect key="frame" x="90" y="95" width="70" height="70"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="Vhp-az-9ZL"/>
+                                <constraint firstAttribute="width" constant="70" id="lHu-xx-9SU"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fishpond_image" translatesAutoresizingMaskIntoConstraints="NO" id="ibV-Ma-SDZ">
+                            <rect key="frame" x="8" y="95" width="70" height="70"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="Syc-IQ-ZVH"/>
+                                <constraint firstAttribute="height" constant="70" id="grU-FW-4LJ"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fishpond_image" translatesAutoresizingMaskIntoConstraints="NO" id="fUd-Bg-Llh">
+                            <rect key="frame" x="172" y="94" width="70" height="70"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="2Zu-qy-kqC"/>
+                                <constraint firstAttribute="height" constant="70" id="YP3-Jl-cbi"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <animations/>
+                    <constraints>
+                        <constraint firstItem="ru4-9b-Lol" firstAttribute="centerX" secondItem="g7H-xe-NUb" secondAttribute="centerX" constant="-0.5" id="3cB-1I-iiH"/>
+                        <constraint firstItem="Sy8-YI-1pU" firstAttribute="top" secondItem="UUs-za-bKZ" secondAttribute="bottom" constant="6" id="8xX-Z4-rH4"/>
+                        <constraint firstItem="ru4-9b-Lol" firstAttribute="width" secondItem="ibV-Ma-SDZ" secondAttribute="width" id="94i-ME-CTL"/>
+                        <constraint firstItem="JhI-9q-LTD" firstAttribute="top" secondItem="tX5-lh-jbF" secondAttribute="bottom" constant="2" id="9WO-Da-fsN"/>
+                        <constraint firstItem="fUd-Bg-Llh" firstAttribute="leading" secondItem="ru4-9b-Lol" secondAttribute="trailing" constant="12" id="Bgl-MI-S9a"/>
+                        <constraint firstAttribute="trailing" secondItem="Sy8-YI-1pU" secondAttribute="trailing" constant="8" id="DwS-iJ-geC"/>
+                        <constraint firstItem="fUd-Bg-Llh" firstAttribute="width" secondItem="ibV-Ma-SDZ" secondAttribute="width" id="H2i-e9-VbL"/>
+                        <constraint firstItem="UUs-za-bKZ" firstAttribute="leading" secondItem="JhI-9q-LTD" secondAttribute="trailing" constant="13" id="KFt-51-mgI"/>
+                        <constraint firstItem="FxP-Br-HwP" firstAttribute="top" secondItem="JhI-9q-LTD" secondAttribute="bottom" constant="6" id="Lft-H1-pjR"/>
+                        <constraint firstItem="tX5-lh-jbF" firstAttribute="leading" secondItem="g7H-xe-NUb" secondAttribute="leading" constant="8" id="LoL-Wc-qOQ"/>
+                        <constraint firstItem="ru4-9b-Lol" firstAttribute="height" secondItem="ibV-Ma-SDZ" secondAttribute="height" id="SL6-eW-2ZE"/>
+                        <constraint firstItem="JhI-9q-LTD" firstAttribute="leading" secondItem="g7H-xe-NUb" secondAttribute="leading" constant="8" id="Szh-R7-6N4"/>
+                        <constraint firstItem="FxP-Br-HwP" firstAttribute="leading" secondItem="g7H-xe-NUb" secondAttribute="leading" constant="8" id="TBA-ZK-iGE"/>
+                        <constraint firstItem="UUs-za-bKZ" firstAttribute="top" secondItem="tX5-lh-jbF" secondAttribute="bottom" constant="2" id="Uui-Ck-NCy"/>
+                        <constraint firstItem="fUd-Bg-Llh" firstAttribute="height" secondItem="ibV-Ma-SDZ" secondAttribute="height" id="VrF-eM-3ee"/>
+                        <constraint firstAttribute="bottom" secondItem="ru4-9b-Lol" secondAttribute="bottom" constant="5" id="WCY-IL-8zJ"/>
+                        <constraint firstItem="ru4-9b-Lol" firstAttribute="leading" secondItem="ibV-Ma-SDZ" secondAttribute="trailing" constant="12" id="Yao-bM-wiU"/>
+                        <constraint firstAttribute="trailing" secondItem="tX5-lh-jbF" secondAttribute="trailing" constant="8" id="b4l-ZF-RCs"/>
+                        <constraint firstAttribute="bottom" secondItem="fUd-Bg-Llh" secondAttribute="bottom" constant="6" id="dO2-jW-Gzo"/>
+                        <constraint firstItem="tX5-lh-jbF" firstAttribute="top" secondItem="g7H-xe-NUb" secondAttribute="top" constant="14" id="kEe-S5-H3U"/>
+                        <constraint firstAttribute="height" constant="170" id="lPP-CG-XaB"/>
+                        <constraint firstItem="Sy8-YI-1pU" firstAttribute="leading" secondItem="FxP-Br-HwP" secondAttribute="trailing" constant="8" id="lwe-1y-h3Q"/>
+                        <constraint firstAttribute="trailing" secondItem="UUs-za-bKZ" secondAttribute="trailing" id="pHv-kP-ytu"/>
+                        <constraint firstAttribute="bottom" secondItem="ibV-Ma-SDZ" secondAttribute="bottom" constant="5" id="z52-4M-wb9"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fishpond_local" translatesAutoresizingMaskIntoConstraints="NO" id="trb-nk-6sk">
+                    <rect key="frame" x="0.0" y="171" width="251" height="49"/>
+                    <animations/>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="g7H-xe-NUb" firstAttribute="leading" secondItem="YZE-3O-SbK" secondAttribute="leading" id="4vW-V4-4jb"/>
+                <constraint firstItem="trb-nk-6sk" firstAttribute="top" secondItem="g7H-xe-NUb" secondAttribute="bottom" constant="1" id="5i1-UR-c91"/>
+                <constraint firstAttribute="trailing" secondItem="g7H-xe-NUb" secondAttribute="trailing" id="Ar5-TW-Pqm"/>
+                <constraint firstItem="g7H-xe-NUb" firstAttribute="top" secondItem="YZE-3O-SbK" secondAttribute="top" id="EgS-lP-4jy"/>
+                <constraint firstAttribute="trailing" secondItem="trb-nk-6sk" secondAttribute="trailing" id="qfp-rn-ZHa"/>
+                <constraint firstItem="trb-nk-6sk" firstAttribute="leading" secondItem="YZE-3O-SbK" secondAttribute="leading" id="u1F-H3-XAE"/>
+                <constraint firstAttribute="bottom" secondItem="trb-nk-6sk" secondAttribute="bottom" id="yaM-J2-CD8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="535.5" y="353"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Fishpond_image" width="54" height="55"/>
+        <image name="Fishpond_local" width="186" height="22"/>
+    </resources>
+</document>
