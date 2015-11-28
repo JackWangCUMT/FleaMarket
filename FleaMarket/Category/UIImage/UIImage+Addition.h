@@ -15,5 +15,5 @@
 
 -(UIImage*) circleImage:(UIImage*) image withParam:(CGFloat) inset;
 
-- (UIImage *)antiAlias;
+- (UIImage *)antiAliasWithRect:(CGRect)rect;
 @end

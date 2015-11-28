@@ -62,29 +62,15 @@
     
     _hitLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
     _hitLabel.text = @"正在载入";
-    _hitLabel.backgroundColor = [UIColor grayColor];
+    _hitLabel.backgroundColor = [UIColor whiteColor];
     _hitLabel.alpha = 0.2;
     _hitLabel.center = self.view.center;
     _hitLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_hitLabel];
     
+
     
-    UIImage *image = [[UIImage alloc] imageWithColor:[UIColor whiteColor] size:CGRectMake(0, 0, 30, 30)];
-  
-    image = [image antiAlias];
-    image = [image circleImage:image withParam:0];
-    _slider = [[FLQRSlider alloc]init];
-    _slider.frame = CGRectMake(20, FLSCREENHEIGHT - 100,FLSCREENWIDHT - 20 * 2 , 40); //滑动条的位置，大小
-    _slider.minimumValue = 0; //最小值
-    _slider.maximumValue = 1; //最大值
-    _slider.value = 0; //默认值
-    _slider.minimumTrackTintColor = [UIColor whiteColor];
-    _slider.maximumTrackTintColor = [UIColor whiteColor];
-    [_slider setThumbImage:image forState:UIControlStateNormal];
-    
-    [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
- 
-    [self.view addSubview:_slider];
+
 }
 
 - (void)openFlash {
@@ -115,6 +101,13 @@
 - (void)sliderValueChanged:(UISlider *)aSlider {
     
     NSLog(@"slider value%f",aSlider.value);
+    
+    AVCaptureDeviceFormat *format = _device.activeFormat;
+    CGFloat maxZoomFactor = format.videoMaxZoomFactor;
+    
+    NSLog(@"maxZoomFactor value%f",maxZoomFactor);
+
+    _preview.transform = CATransform3DScale(CATransform3DIdentity, aSlider.value *2 + 1, aSlider.value * 2 + 1, 1);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -177,6 +170,12 @@
     FLQRAimImageView *aimImageView = [[FLQRAimImageView alloc] init];
     aimImageView.center = CGPointMake(self.view.bounds.size.width * 0.5, self.view.bounds.size.height * 0.5);
     [self.view addSubview:aimImageView];
+    
+
+    _slider = [[FLQRSlider alloc]init];
+    _slider.frame = CGRectMake(aimImageView.frame.origin.x, FLSCREENHEIGHT - 100,FLSCREENWIDHT - aimImageView.frame.origin.x * 2 , 40); //滑动条的位置，大小
+    [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:_slider];
     
     //修正扫描区域
     CGFloat screenHeight = self.view.frame.size.height;

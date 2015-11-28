@@ -51,13 +51,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FleaMarket/General/Home/Controller/QRCode/FLQRViewController.m"
-            timestampString = "470386220.450115"
+            filePath = "FleaMarket/Category/UIImage/UIImage+Addition.m"
+            timestampString = "470390529.163943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-circleImage:withParam:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FleaMarket/Category/UIImage/UIImage+Addition.m"
+            timestampString = "470390568.871984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "-circleImage:withParam:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
