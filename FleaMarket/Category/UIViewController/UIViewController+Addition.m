@@ -120,6 +120,12 @@ static char *btnClickAction;
     self.navigationController.navigationBar.clipsToBounds = NO;
 }
 
+- (void)fl_translucentNavBar {
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar  setShadowImage:[UIImage new]];
+}
+
 #pragma mark - getter and setter 
 -(UIButton *)leftNavBarItem {
     

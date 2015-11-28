@@ -56,7 +56,6 @@
 - (void)fl_customNavbarColor {
     
 
-    
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:kNavbarColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
 }

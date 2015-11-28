@@ -35,6 +35,10 @@
 		70CFCC471C041656004B859F /* UIViewController+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CFCC461C041656004B859F /* UIViewController+Addition.m */; };
 		70CFCC4C1C0418A4004B859F /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CFCC4B1C0418A4004B859F /* UIColor+Addition.m */; };
 		70CFCC511C0441B3004B859F /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CFCC4F1C0441B3004B859F /* EXTScope.m */; };
+		70E1A5DA1C0947A700AE8CDA /* FLQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1A5D91C0947A700AE8CDA /* FLQRViewController.m */; };
+		70E1A5DD1C094A7500AE8CDA /* PageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1A5DC1C094A7500AE8CDA /* PageManager.m */; };
+		70E1A5E11C094C7800AE8CDA /* UINavigationController+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1A5E01C094C7800AE8CDA /* UINavigationController+Addition.m */; };
+		70E1A5E51C09573B00AE8CDA /* FLQRAimImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1A5E41C09573B00AE8CDA /* FLQRAimImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +100,14 @@
 		70CFCC4E1C0441B3004B859F /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
 		70CFCC4F1C0441B3004B859F /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
 		70CFCC501C0441B3004B859F /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		70E1A5D81C0947A700AE8CDA /* FLQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLQRViewController.h; sourceTree = "<group>"; };
+		70E1A5D91C0947A700AE8CDA /* FLQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLQRViewController.m; sourceTree = "<group>"; };
+		70E1A5DB1C094A7500AE8CDA /* PageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageManager.h; sourceTree = "<group>"; };
+		70E1A5DC1C094A7500AE8CDA /* PageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageManager.m; sourceTree = "<group>"; };
+		70E1A5DF1C094C7800AE8CDA /* UINavigationController+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Addition.h"; sourceTree = "<group>"; };
+		70E1A5E01C094C7800AE8CDA /* UINavigationController+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Addition.m"; sourceTree = "<group>"; };
+		70E1A5E31C09573B00AE8CDA /* FLQRAimImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLQRAimImageView.h; sourceTree = "<group>"; };
+		70E1A5E41C09573B00AE8CDA /* FLQRAimImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLQRAimImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +252,8 @@
 		70C379841C033347004FFDBD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				70E1A5DB1C094A7500AE8CDA /* PageManager.h */,
+				70E1A5DC1C094A7500AE8CDA /* PageManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -263,6 +277,7 @@
 		70C379871C033372004FFDBD /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				70E1A5DE1C094C7800AE8CDA /* UINavigationController */,
 				70CFCC401C041633004B859F /* UIViewController */,
 				70CFCC3B1C04134F004B859F /* UIColor */,
 				70CFCC3C1C04134F004B859F /* UIImage */,
@@ -432,6 +447,7 @@
 		70C379AE1C0338D2004FFDBD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				70E1A5D71C09478800AE8CDA /* QRCode */,
 				70C379BA1C033912004FFDBD /* FLHomeViewController.h */,
 				70C379BB1C033912004FFDBD /* FLHomeViewController.m */,
 			);
@@ -530,6 +546,34 @@
 				70CFCC501C0441B3004B859F /* metamacros.h */,
 			);
 			path = EXTScope;
+			sourceTree = "<group>";
+		};
+		70E1A5D71C09478800AE8CDA /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				70E1A5E21C09571C00AE8CDA /* View */,
+				70E1A5D81C0947A700AE8CDA /* FLQRViewController.h */,
+				70E1A5D91C0947A700AE8CDA /* FLQRViewController.m */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		70E1A5DE1C094C7800AE8CDA /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				70E1A5DF1C094C7800AE8CDA /* UINavigationController+Addition.h */,
+				70E1A5E01C094C7800AE8CDA /* UINavigationController+Addition.m */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		70E1A5E21C09571C00AE8CDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70E1A5E31C09573B00AE8CDA /* FLQRAimImageView.h */,
+				70E1A5E41C09573B00AE8CDA /* FLQRAimImageView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7176833116AF853F5C98088A /* Pods */ = {
@@ -683,6 +727,8 @@
 				70CFCC321C03FDB9004B859F /* FLPostViewController.m in Sources */,
 				70C379B61C0338F7004FFDBD /* FLAccountViewController.m in Sources */,
 				70CFCC3F1C041371004B859F /* UIImage+Addition.m in Sources */,
+				70E1A5DA1C0947A700AE8CDA /* FLQRViewController.m in Sources */,
+				70E1A5E11C094C7800AE8CDA /* UINavigationController+Addition.m in Sources */,
 				70CFCC511C0441B3004B859F /* EXTScope.m in Sources */,
 				70C379941C0335DA004FFDBD /* FLTabbar.m in Sources */,
 				709EC5FD1C045A6800E7E0E2 /* FLADBannerView.m in Sources */,
@@ -694,6 +740,8 @@
 				7065054D1C05D61C007368FE /* FLPublicButton.m in Sources */,
 				708268C21C058D9300061754 /* FLFishpondView.m in Sources */,
 				70C3798D1C0333DC004FFDBD /* FLTabbarController.m in Sources */,
+				70E1A5E51C09573B00AE8CDA /* FLQRAimImageView.m in Sources */,
+				70E1A5DD1C094A7500AE8CDA /* PageManager.m in Sources */,
 				70C3796A1C031ABC004FFDBD /* main.m in Sources */,
 				70CFCC471C041656004B859F /* UIViewController+Addition.m in Sources */,
 				70C379BC1C033912004FFDBD /* FLHomeViewController.m in Sources */,
