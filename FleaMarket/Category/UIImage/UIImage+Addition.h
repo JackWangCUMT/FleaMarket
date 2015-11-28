@@ -10,5 +10,10 @@
 
 @interface UIImage (Addition)
 
-+ (UIImage *)imageWithColor:(UIColor *)color;
+- (UIImage *)imageWithColor:(UIColor *)color;       //默认是1*1
+- (UIImage *)imageWithColor:(UIColor *)color size:(CGRect)rect;
+
+-(UIImage*) circleImage:(UIImage*) image withParam:(CGFloat) inset;
+
+- (UIImage *)antiAlias;
 @end

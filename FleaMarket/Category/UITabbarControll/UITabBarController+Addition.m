@@ -49,14 +49,14 @@
 
 - (void)fl_tabbarBackgroundImage {
     
-    [[UITabBar appearance] setBackgroundImage:[UIImage imageWithColor:kTabbarColor]];
+    [[UITabBar appearance] setBackgroundImage:[[UIImage alloc] imageWithColor:kTabbarColor]];
 
 }
 
 - (void)fl_customNavbarColor {
     
-
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:kNavbarColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    UIImage *image = [[UIImage alloc] init];
+    [[UINavigationBar appearance] setBackgroundImage:[image imageWithColor:kNavbarColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
 }
 @end

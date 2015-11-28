@@ -39,6 +39,7 @@
 		70E1A5DD1C094A7500AE8CDA /* PageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1A5DC1C094A7500AE8CDA /* PageManager.m */; };
 		70E1A5E11C094C7800AE8CDA /* UINavigationController+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1A5E01C094C7800AE8CDA /* UINavigationController+Addition.m */; };
 		70E1A5E51C09573B00AE8CDA /* FLQRAimImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1A5E41C09573B00AE8CDA /* FLQRAimImageView.m */; };
+		70E1A5E81C0983EC00AE8CDA /* FLQRSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1A5E71C0983EC00AE8CDA /* FLQRSlider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,8 @@
 		70E1A5E01C094C7800AE8CDA /* UINavigationController+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Addition.m"; sourceTree = "<group>"; };
 		70E1A5E31C09573B00AE8CDA /* FLQRAimImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLQRAimImageView.h; sourceTree = "<group>"; };
 		70E1A5E41C09573B00AE8CDA /* FLQRAimImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLQRAimImageView.m; sourceTree = "<group>"; };
+		70E1A5E61C0983EC00AE8CDA /* FLQRSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLQRSlider.h; sourceTree = "<group>"; };
+		70E1A5E71C0983EC00AE8CDA /* FLQRSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLQRSlider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -572,6 +575,8 @@
 			children = (
 				70E1A5E31C09573B00AE8CDA /* FLQRAimImageView.h */,
 				70E1A5E41C09573B00AE8CDA /* FLQRAimImageView.m */,
+				70E1A5E61C0983EC00AE8CDA /* FLQRSlider.h */,
+				70E1A5E71C0983EC00AE8CDA /* FLQRSlider.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -740,6 +745,7 @@
 				7065054D1C05D61C007368FE /* FLPublicButton.m in Sources */,
 				708268C21C058D9300061754 /* FLFishpondView.m in Sources */,
 				70C3798D1C0333DC004FFDBD /* FLTabbarController.m in Sources */,
+				70E1A5E81C0983EC00AE8CDA /* FLQRSlider.m in Sources */,
 				70E1A5E51C09573B00AE8CDA /* FLQRAimImageView.m in Sources */,
 				70E1A5DD1C094A7500AE8CDA /* PageManager.m in Sources */,
 				70C3796A1C031ABC004FFDBD /* main.m in Sources */,

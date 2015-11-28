@@ -13,6 +13,7 @@
 #import "UIConfig.h"
 #import <AVFoundation/AVFoundation.h>
 #import "FLQRAimImageView.h"
+#import "FLQRSlider.h"
 
 @interface FLQRViewController ()<AVCaptureMetadataOutputObjectsDelegate>
 
@@ -23,6 +24,9 @@
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer * preview;
 
 @property (strong, nonatomic) UILabel *hitLabel;
+@property (strong, nonatomic) FLQRSlider *slider;
+
+@property (nonatomic, assign) BOOL isFlashOn;
 @end
 
 @implementation FLQRViewController
@@ -48,12 +52,12 @@
     }];
     
     [self fl_cusomNavBarItemWithImage:@"qrcode_flash_normal"
-                            highlight:@""
+                            highlight:@"qrcode_flash_highlight"
                                 title:@""
                                  type:FLNavBarItemTypeRight
                                action:^{
                                    
-                                   
+                                   [self openFlash];
                                }];
     
     _hitLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
@@ -64,6 +68,53 @@
     _hitLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_hitLabel];
     
+    
+    UIImage *image = [[UIImage alloc] imageWithColor:[UIColor whiteColor] size:CGRectMake(0, 0, 30, 30)];
+  
+    image = [image antiAlias];
+    image = [image circleImage:image withParam:0];
+    _slider = [[FLQRSlider alloc]init];
+    _slider.frame = CGRectMake(20, FLSCREENHEIGHT - 100,FLSCREENWIDHT - 20 * 2 , 40); //滑动条的位置，大小
+    _slider.minimumValue = 0; //最小值
+    _slider.maximumValue = 1; //最大值
+    _slider.value = 0; //默认值
+    _slider.minimumTrackTintColor = [UIColor whiteColor];
+    _slider.maximumTrackTintColor = [UIColor whiteColor];
+    [_slider setThumbImage:image forState:UIControlStateNormal];
+    
+    [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+ 
+    [self.view addSubview:_slider];
+}
+
+- (void)openFlash {
+    
+    
+     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+   
+    if ([device hasTorch] && [device hasFlash]) {
+        
+        [device lockForConfiguration:nil];
+        if (_isFlashOn) {
+            
+            [device setTorchMode:AVCaptureTorchModeOff];
+            [device setFlashMode:AVCaptureFlashModeOff];
+            _isFlashOn = NO;
+            
+        } else {
+            
+            [device setTorchMode:AVCaptureTorchModeOn];
+            [device setFlashMode:AVCaptureFlashModeOn];
+            _isFlashOn = YES;
+        }
+        [device unlockForConfiguration];
+    }
+}
+
+- (void)sliderValueChanged:(UISlider *)aSlider {
+    
+    NSLog(@"slider value%f",aSlider.value);
 }
 
 - (void)viewDidAppear:(BOOL)animated {

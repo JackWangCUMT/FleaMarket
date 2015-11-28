@@ -52,6 +52,7 @@ static char *btnClickAction;
         
         UIImage *highlightImage = [UIImage imageNamed:highlighName];
         [button setImage:highlightImage forState:UIControlStateHighlighted];
+        [button setImage:highlightImage forState:UIControlStateSelected];
     }
     
     if (title) {
@@ -70,6 +71,7 @@ static char *btnClickAction;
 
 - (void)actionBtnClick:(UIButton *)button {
     
+    button.selected = !button.isSelected;
     dispatch_block_t buttonBlock = objc_getAssociatedObject(button, &btnClickAction);
     if (buttonBlock) {
         buttonBlock();

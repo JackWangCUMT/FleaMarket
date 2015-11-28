@@ -80,7 +80,7 @@
     
     [super viewWillAppear:animated];
 //    [self fl_navBarColor:kNavbarColor];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:kNavbarColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] imageWithColor:kNavbarColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar  setShadowImage:[UIImage new]];
 }
 
