@@ -46,4 +46,9 @@ typedef NS_ENUM(NSUInteger, FLNavBarItemType) {
  */
 
 - (void)fl_navBarShadow;
+
+/**
+ *  导航栏透明
+ */
+- (void)fl_translucentNavBar;
 @end

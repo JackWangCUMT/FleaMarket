@@ -23,6 +23,8 @@
 #import <AssetsLibrary/ALAsset.h>
 #import <AVFoundation/AVAssetTrack.h>
 
+#import "PageManager.h"
+#import "UIImage+Addition.h"
 
 @interface FLHomeViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -46,7 +48,8 @@
                                 title:@""
                                  type:FLNavBarItemTypeLeft
                                action:^{
-        
+        [[PageManager manager] pushWithController:QRCodeController param:nil];
+                                   
     }];
     
     [self fl_cusomNavBarItemWithImage:@"home_search"
@@ -71,8 +74,14 @@
     
     FLRefreshHeader *header =[FLRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     self.tableView.mj_header = header;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
     
-    
+    [super viewWillAppear:animated];
+//    [self fl_navBarColor:kNavbarColor];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:kNavbarColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar  setShadowImage:[UIImage new]];
 }
 
 
