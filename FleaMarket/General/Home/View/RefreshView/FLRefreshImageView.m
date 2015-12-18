@@ -7,13 +7,15 @@
 //
 
 #import "FLRefreshImageView.h"
+#import <objc/objc.h>
+#import <objc/runtime.h>
 
 @interface FLRefreshImageView () {
     
     UIImageView *pullingMouthImageView;
     UIImageView *refreshingMouthImageView;
     
-
+    CGFloat offsetY;
 }
 
 @end
@@ -84,6 +86,8 @@
     if (!pullingMouthImageView) {
         pullingMouthImageView = [[UIImageView alloc] initWithFrame:self.bounds];
         pullingMouthImageView.image = [UIImage imageNamed:@"refresh_pulling_0"];
+//        pullingMouthImageView.layer.anchorPoint = CGPointMake(0.5, 0);
+        pullingMouthImageView.layer.position = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
         [self addSubview:pullingMouthImageView];
     }
     
@@ -100,6 +104,7 @@
     if (!refreshingMouthImageView) {
         refreshingMouthImageView = [[UIImageView alloc] initWithFrame:self.bounds];
         refreshingMouthImageView.image = [UIImage imageNamed:@"refresh_loading_0"];
+//        refreshingMouthImageView.layer.anchorPoint = CGPointMake(1, 0.5);
         [self addSubview:refreshingMouthImageView];
     }
     
@@ -115,8 +120,43 @@
 - (void)changePullingMouthLength:(CGFloat)length {
     
         //TODO:这里嘴巴要跟着手势拉伸动起来
+//    [self showPullingMouth];
+
+    if (offsetY == length) {
+        
+        NSLog(@"相等了");
+        return;
+    }
     
+//    [pullingMouthImageView.layer removeAnimationForKey:@"scale"];
     
+    offsetY = length;
+    length = length / 50;
+//    CABasicAnimation *scaleAnimation;
+//    scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
+//    scaleAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+//    scaleAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1+length, 1.0)];
+////    scaleAnimation.duration = 0.2;
+//    scaleAnimation.cumulative = YES;
+//    scaleAnimation.repeatCount = 1;
+//    scaleAnimation.removedOnCompletion= NO;
+//    scaleAnimation.fillMode=kCAFillModeForwards;
+////    scaleAnimation.autoreverses = NO;
+////    scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.2:0.0 :0.8 :1.0];
+////    scaleAnimation.speed = 1.0f;
+////    scaleAnimation.beginTime = 0.0f;
+//    
+//
+//    [pullingMouthImageView.layer addAnimation:scaleAnimation forKey:@"scale"];
+    
+    [UIView animateWithDuration:0.1 animations:^{
+        
+               pullingMouthImageView.layer.transform = CATransform3DMakeScale(1.0, 1 + length, 1.0);
+//        pullingMouthImageView.layer.position = CGPointMake(self.bounds.size.height / 2, self.bounds.size.height / 2);
+    }];
+
+
+
 }
 
 //震动的动画
